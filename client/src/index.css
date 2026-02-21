@@ -43,74 +43,93 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* XZIRO Lab Tactical Color Scheme */
+  /* Primary Colors */
+  --primary: #c74037;
+  --primary-foreground: #d9cdb8;
+  --sidebar-primary: #c74037;
+  --sidebar-primary-foreground: #d9cdb8;
+  
+  /* Chart Colors - Red accent variants */
+  --chart-1: #c74037;
+  --chart-2: #d9534f;
+  --chart-3: #a63229;
+  --chart-4: #8a2620;
+  --chart-5: #6d1f18;
+  
+  /* Spacing & Radius */
+  --radius: 0.5rem;
+  
+  /* Dark Navy Background (Light Theme Base) */
+  --background: #1a2332;
+  --foreground: #d9cdb8;
+  --card: #212d3f;
+  --card-foreground: #d9cdb8;
+  --popover: #212d3f;
+  --popover-foreground: #d9cdb8;
+  
+  /* Secondary & Muted - Blue-gray tones */
+  --secondary: #3a4a5c;
+  --secondary-foreground: #d9cdb8;
+  --muted: #2a3847;
+  --muted-foreground: #8a9099;
+  
+  /* Accent - Red */
+  --accent: #c74037;
+  --accent-foreground: #d9cdb8;
+  
+  /* Destructive */
+  --destructive: #c74037;
+  --destructive-foreground: #d9cdb8;
+  
+  /* Border & Input */
+  --border: rgba(217, 205, 184, 0.15);
+  --input: rgba(217, 205, 184, 0.1);
+  --ring: #c74037;
+  
+  /* Sidebar */
+  --sidebar: #212d3f;
+  --sidebar-foreground: #d9cdb8;
+  --sidebar-accent: #c74037;
+  --sidebar-accent-foreground: #d9cdb8;
+  --sidebar-border: rgba(217, 205, 184, 0.15);
+  --sidebar-ring: #c74037;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* XZIRO Lab Tactical - Dark theme (same as light for tactical aesthetic) */
+  --primary: #c74037;
+  --primary-foreground: #d9cdb8;
+  --sidebar-primary: #c74037;
+  --sidebar-primary-foreground: #d9cdb8;
+  --background: #1a2332;
+  --foreground: #d9cdb8;
+  --card: #212d3f;
+  --card-foreground: #d9cdb8;
+  --popover: #212d3f;
+  --popover-foreground: #d9cdb8;
+  --secondary: #3a4a5c;
+  --secondary-foreground: #d9cdb8;
+  --muted: #2a3847;
+  --muted-foreground: #8a9099;
+  --accent: #c74037;
+  --accent-foreground: #d9cdb8;
+  --destructive: #c74037;
+  --destructive-foreground: #d9cdb8;
+  --border: rgba(217, 205, 184, 0.15);
+  --input: rgba(217, 205, 184, 0.1);
+  --ring: #c74037;
+  --chart-1: #c74037;
+  --chart-2: #d9534f;
+  --chart-3: #a63229;
+  --chart-4: #8a2620;
+  --chart-5: #6d1f18;
+  --sidebar: #212d3f;
+  --sidebar-foreground: #d9cdb8;
+  --sidebar-accent: #c74037;
+  --sidebar-accent-foreground: #d9cdb8;
+  --sidebar-border: rgba(217, 205, 184, 0.15);
+  --sidebar-ring: #c74037;
 }
 
 @layer base {
@@ -174,4 +193,113 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+
+  /* Tactical Design Enhancements */
+  
+  /* Smooth transitions for all interactive elements */
+  a, button, input, select, textarea {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  /* Accent bar for tactical sections */
+  .accent-bar-left {
+    @apply border-l-4 border-accent pl-4;
+  }
+
+  /* Tactical card hover effect */
+  .card-tactical {
+    @apply bg-card border border-border hover:border-accent/50 transition-all duration-300;
+  }
+
+  /* Monospace typography for technical elements */
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  /* Tactical badge styling */
+  .badge-tactical {
+    @apply inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/30 rounded text-sm font-mono text-accent;
+  }
+
+  /* Smooth button transitions */
+  .btn-tactical {
+    @apply font-mono font-medium transition-all duration-200 ease-out;
+  }
+
+  .btn-tactical:hover {
+    @apply transform -translate-y-0.5;
+  }
+
+  /* Section divider with tactical aesthetic */
+  .section-divider {
+    @apply border-t border-border my-0;
+  }
+
+  /* Gradient text for emphasis */
+  .gradient-accent {
+    background: linear-gradient(135deg, #c74037 0%, #d9534f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Tactical box shadow */
+  .shadow-tactical {
+    @apply shadow-lg shadow-accent/5;
+  }
+
+  /* Smooth fade-in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  /* Tactical glow effect */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(199, 64, 55, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(199, 64, 55, 0);
+    }
+  }
+
+  .animate-glow {
+    animation: glowPulse 2s infinite;
+  }
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  opacity: 0.8;
 }
