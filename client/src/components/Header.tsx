@@ -28,17 +28,17 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-foreground hover:text-accent transition-colors">
-            Features
+          <a href="/" className="text-foreground hover:text-accent transition-colors">
+            Home
           </a>
-          <a href="#workflow" className="text-foreground hover:text-accent transition-colors">
-            Workflow
+          <a href="/projects" className="text-foreground hover:text-accent transition-colors">
+            Projects
           </a>
-          <a href="#pricing" className="text-foreground hover:text-accent transition-colors">
-            Pricing
+          <a href="#about" className="text-foreground hover:text-accent transition-colors">
+            About
           </a>
-          <a href="#docs" className="text-foreground hover:text-accent transition-colors">
-            Docs
+          <a href="#contact" className="text-foreground hover:text-accent transition-colors">
+            Contact
           </a>
         </nav>
 
@@ -62,20 +62,20 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {isOpen && (
+          {isOpen && (
         <div className="md:hidden bg-card border-b border-border">
           <nav className="container py-4 flex flex-col gap-4">
-            <a href="#features" className="text-foreground hover:text-accent transition-colors">
-              Features
+            <a href="/" className="text-foreground hover:text-accent transition-colors">
+              Home
             </a>
-            <a href="#workflow" className="text-foreground hover:text-accent transition-colors">
-              Workflow
+            <a href="/projects" className="text-foreground hover:text-accent transition-colors">
+              Projects
             </a>
-            <a href="#pricing" className="text-foreground hover:text-accent transition-colors">
-              Pricing
+            <a href="#about" className="text-foreground hover:text-accent transition-colors">
+              About
             </a>
-            <a href="#docs" className="text-foreground hover:text-accent transition-colors">
-              Docs
+            <a href="#contact" className="text-foreground hover:text-accent transition-colors">
+              Contact
             </a>
             <Button 
               variant="default"

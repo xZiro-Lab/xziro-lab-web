@@ -35,18 +35,18 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-4 font-mono">Product</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Features
+                <a href="/projects" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  Projects
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Pricing
+                <a href="/contributions" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  Contributions
                 </a>
               </li>
               <li>
-                <a href="#security" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Security
+                <a href="#about" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  About
                 </a>
               </li>
               <li>
