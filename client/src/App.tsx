@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import Contributions from "./pages/Contributions";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function Router() {
       <main className="flex-1">
         <Switch>
           <Route path={"/"} component={Home} />
+          <Route path={"/projects/:id"} component={ProjectDetail} />
           <Route path={"/projects"} component={Projects} />
           <Route path={"/contributions"} component={Contributions} />
           <Route path={"/404"} component={NotFound} />

@@ -7,7 +7,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Star, GitFork, Users, Filter } from "lucide-react";
+import { Github, Star, GitFork, Users, Filter, Code2, ArrowRight } from "lucide-react";
 import { projects, categories, type Project } from "@/lib/projects";
 
 export default function Projects() {
@@ -115,32 +115,48 @@ export default function Projects() {
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map((project: Project) => (
-                  <Card key={project.id} className="bg-background border-border hover:border-accent/50 transition-all duration-300 overflow-hidden group flex flex-col">
-                    <div className="h-40 bg-muted overflow-hidden relative">
-                      <img 
-                        src={project.image} 
-                        alt={project.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                  <Card
+                    key={project.id}
+                    className="bg-background border-border hover:border-accent/50 transition-all duration-300 overflow-hidden group flex flex-col"
+                  >
+                    <div className="h-40 bg-muted overflow-hidden relative flex items-center justify-center">
+                      {project.image ? (
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-accent/5 flex items-center justify-center">
+                          <Code2 className="text-accent/40" size={40} />
+                        </div>
+                      )}
                       <div className="absolute top-4 right-4">
-                        <span className={`inline-flex items-center px-3 py-1 rounded text-xs font-mono font-semibold ${
-                          project.status === 'active' 
-                            ? 'bg-accent/20 text-accent border border-accent/30'
-                            : 'bg-muted-foreground/20 text-muted-foreground border border-muted-foreground/30'
-                        }`}>
-                          {project.status === 'active' && '● Active'}
-                          {project.status === 'experimental' && '◉ Experimental'}
-                          {project.status === 'upcoming' && '◯ Upcoming'}
+                        <span
+                          className={`inline-flex items-center px-3 py-1 rounded text-xs font-mono font-semibold ${
+                            project.status === "active"
+                              ? "bg-accent/20 text-accent border border-accent/30"
+                              : "bg-muted-foreground/20 text-muted-foreground border border-muted-foreground/30"
+                          }`}
+                        >
+                          {project.status === "active" && "● Active"}
+                          {project.status === "experimental" && "◉ Experimental"}
+                          {project.status === "upcoming" && "◯ Upcoming"}
                         </span>
                       </div>
                     </div>
                     <CardContent className="pt-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold text-foreground mb-2 font-mono">{project.name}</h3>
+                      <h3 className="text-xl font-bold text-foreground mb-2 font-mono">
+                        {project.name}
+                      </h3>
                       <p className="text-muted-foreground mb-4 flex-1">{project.description}</p>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-6">
                         {project.tags.map((tag: string) => (
-                          <span key={tag} className="inline-flex items-center px-2 py-1 bg-accent/10 border border-accent/20 rounded text-xs text-accent font-mono">
+                          <span
+                            key={tag}
+                            className="inline-flex items-center px-2 py-1 bg-accent/10 border border-accent/20 rounded text-xs text-accent font-mono"
+                          >
                             {tag}
                           </span>
                         ))}
@@ -163,21 +179,30 @@ export default function Projects() {
                         </div>
                       )}
 
-                      <div className="flex gap-2">
-                        <Button 
+                      <div className="flex gap-2 flex-wrap">
+                        <Button
                           size="sm"
-                          className="flex-1 bg-accent text-background hover:bg-accent/90 font-mono"
-                          onClick={() => window.open(project.github, '_blank')}
+                          className="flex-1 min-w-0 bg-accent text-background hover:bg-accent/90 font-mono"
+                          onClick={() => (window.location.href = `/projects/${project.id}`)}
+                        >
+                          View Details
+                          <ArrowRight size={14} className="ml-1" />
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-accent text-accent hover:bg-accent/10 font-mono"
+                          onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github size={16} className="mr-2" />
                           GitHub
                         </Button>
                         {project.demo && (
-                          <Button 
+                          <Button
                             size="sm"
                             variant="outline"
-                            className="flex-1 border-accent text-accent hover:bg-accent/10 font-mono"
-                            onClick={() => window.open(project.demo, '_blank')}
+                            className="border-accent text-accent hover:bg-accent/10 font-mono"
+                            onClick={() => window.open(project.demo, "_blank")}
                           >
                             Demo
                           </Button>

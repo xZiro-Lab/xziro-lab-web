@@ -34,21 +34,21 @@ export default function Header() {
           <a href="/projects" className="text-foreground hover:text-accent transition-colors">
             Projects
           </a>
-          <a href="#about" className="text-foreground hover:text-accent transition-colors">
+          <a href="/#about" className="text-foreground hover:text-accent transition-colors">
             About
           </a>
-          <a href="#contact" className="text-foreground hover:text-accent transition-colors">
+          <a href="/#contact" className="text-foreground hover:text-accent transition-colors">
             Contact
           </a>
         </nav>
 
-        {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-          <Button 
-            variant="outline" 
-            className="border-accent text-accent hover:bg-accent hover:text-background"
+          <Button
+            variant="outline"
+            className="border-accent text-accent hover:bg-accent hover:text-background font-mono"
+            onClick={() => window.open("https://github.com/xZiro-Lab", "_blank")}
           >
-            Get Started
+            GitHub
           </Button>
         </div>
 
@@ -71,17 +71,18 @@ export default function Header() {
             <a href="/projects" className="text-foreground hover:text-accent transition-colors">
               Projects
             </a>
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">
+            <a href="/#about" className="text-foreground hover:text-accent transition-colors">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-accent transition-colors">
+            <a href="/#contact" className="text-foreground hover:text-accent transition-colors">
               Contact
             </a>
-            <Button 
+            <Button
               variant="default"
-              className="w-full bg-accent text-background hover:bg-accent/90"
+              className="w-full bg-accent text-background hover:bg-accent/90 font-mono"
+              onClick={() => window.open("https://github.com/xZiro-Lab", "_blank")}
             >
-              Get Started
+              GitHub
             </Button>
           </nav>
         </div>
