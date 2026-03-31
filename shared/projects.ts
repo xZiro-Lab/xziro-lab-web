@@ -45,17 +45,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'noctyl',
-    name: 'Noctyl',
+    id: 'deep-scout',
+    name: 'Deep Scout',
     description:
       'Static token usage estimator for multi-agent AI workflows. Estimates cost and usage before execution—no API calls, no tokens burned.',
     longDescription:
-      'Noctyl analyzes code repositories (e.g. LangGraph-based agentic systems), builds a workflow graph, and produces token/cost envelopes. It detects unbounded loops, prompt explosion, and structural risks. Phase 1: ingestion pipeline. Phase 2: graph analysis, cycles, metrics. Phase 3: token estimation, model profiles, cost envelopes. 493+ tests, CLI (noctyl estimate), schema 3.0 output. Not a runtime monitor—pre-execution intelligence only.',
+      'Deep Scout analyzes code repositories (e.g. LangGraph-based agentic systems), builds a workflow graph, and produces token/cost envelopes. It detects unbounded loops, prompt explosion, and structural risks. Phase 1: ingestion pipeline. Phase 2: graph analysis, cycles, metrics. Phase 3: token estimation, model profiles, cost envelopes. 493+ tests, CLI (deep-scout estimate), schema 3.0 output. Not a runtime monitor—pre-execution intelligence only.',
     category: 'tools',
     status: 'active',
     tags: ['LangGraph', 'Static Analysis', 'Token Estimation', 'Multi-Agent', 'CLI'],
-    github: 'https://github.com/xZiro-Lab/Noctyl',
-    documentation: 'https://github.com/xZiro-Lab/Noctyl#readme',
+    github: 'https://github.com/xZiro-Lab/Deep-Scout',
+    documentation: 'https://github.com/xZiro-Lab/Deep-Scout#readme',
     demo: undefined,
     image: undefined,
     metrics: {
@@ -74,14 +74,14 @@ export const projects: Project[] = [
       { title: 'Phase 3 — Token estimation', description: 'Token envelopes, model profiles, cost estimation.', done: true },
     ],
     cliSnippets: [
-      { label: 'Basic usage', code: 'noctyl estimate ./my_project' },
-      { label: 'With profile and output', code: 'noctyl estimate ./my_project --profile profiles/gpt-4o.yaml --output estimates.json' },
+      { label: 'Basic usage', code: 'deep-scout estimate ./my_project' },
+      { label: 'With profile and output', code: 'deep-scout estimate ./my_project --profile profiles/gpt-4o.yaml --output estimates.json' },
     ],
     problem:
       'Agentic systems often fail silently: unbounded loops, prompt and memory explosion, hidden retry costs, poor agent decomposition. You only find out after burning tokens and budget.',
     solution:
-      'Noctyl analyzes your repo, builds the workflow graph, and estimates token usage and cost before you run anything. No API keys, no execution—just static analysis and envelope reports for humans and AI assistants (Claude, Codex, Copilot, Cursor).',
-    installCommand: 'curl -fsSL https://raw.githubusercontent.com/xZiro-Lab/Noctyl/main/install.sh | bash',
+      'Deep Scout analyzes your repo, builds the workflow graph, and estimates token usage and cost before you run anything. No API keys, no execution—just static analysis and envelope reports for humans and AI assistants (Claude, Codex, Copilot, Cursor).',
+    installCommand: 'curl -fsSL https://raw.githubusercontent.com/xZiro-Lab/Deep-Scout/main/install.sh | bash',
     heroSubline: 'CLI. No API keys. Pre-execution only.',
   },
   {
