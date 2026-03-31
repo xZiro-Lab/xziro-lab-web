@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>XZIRO_LAB // XZIRO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#93000a",
+              "tertiary-fixed": "#e0e2ee",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#c4c6d1",
+              "primary": "#ffb3ae",
+              "surface": "#10131b",
+              "on-tertiary": "#2d3039",
+              "background": "#10131b",
+              "surface-container-high": "#272a32",
+              "on-secondary": "#2e3132",
+              "surface-tint": "#ffb3ae",
+              "on-secondary-fixed": "#191c1e",
+              "error": "#ffb4ab",
+              "on-surface": "#e0e2ee",
+              "secondary-fixed": "#e1e2e4",
+              "on-primary-container": "#5c0008",
+              "surface-container-highest": "#32353d",
+              "on-tertiary-container": "#272a32",
+              "on-primary-fixed-variant": "#930014",
+              "outline-variant": "#5b403e",
+              "surface-bright": "#363942",
+              "secondary-container": "#444749",
+              "primary-container": "#ff5352",
+              "on-secondary-container": "#b4b5b7",
+              "secondary-fixed-dim": "#c5c6c8",
+              "on-error": "#690005",
+              "inverse-surface": "#e0e2ee",
+              "surface-container-low": "#181b24",
+              "on-secondary-fixed-variant": "#444749",
+              "inverse-on-surface": "#2d3039",
+              "primary-fixed-dim": "#ffb3ae",
+              "surface-variant": "#32353d",
+              "inverse-primary": "#b91b25",
+              "surface-container": "#1c1f28",
+              "on-primary": "#68000b",
+              "secondary": "#c5c6c8",
+              "on-surface-variant": "#e3bebb",
+              "on-background": "#e0e2ee",
+              "outline": "#aa8986",
+              "surface-dim": "#10131b",
+              "primary-fixed": "#ffdad7",
+              "on-primary-fixed": "#410004",
+              "on-tertiary-fixed-variant": "#444650",
+              "tertiary-container": "#8e909b",
+              "tertiary": "#c4c6d1",
+              "surface-container-lowest": "#0b0e16",
+              "on-tertiary-fixed": "#181b24"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-morphism {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .asymmetric-clip {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-[#10131B]/70 backdrop-blur-xl dark:bg-[#10131B]/70 shadow-[0_8px_32px_0_rgba(246,74,74,0.06)]">
+<nav class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#F64A4A] dark:text-[#FFB3AE]" data-icon="terminal">terminal</span>
+<span class="text-xl font-bold tracking-tighter text-[#F64A4A] font-['Space_Grotesk']">XZIRO_LAB</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-wider uppercase text-sm font-bold">
+<a class="text-[#F64A4A] border-b-2 border-[#F64A4A] pb-1" href="#">TERMINAL</a>
+<a class="text-slate-400 hover:text-slate-100 transition-colors" href="#">PROJECTS</a>
+<a class="text-slate-400 hover:text-slate-100 transition-colors" href="#">RESEARCH</a>
+<a class="text-slate-400 hover:text-slate-100 transition-colors" href="#">UPLINK</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="minimalist close-up portrait of a digital avatar with neon red accents on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANA8JxZEIoFEdYLtMOuKaLi-bsou94580oAJEAnV9qS1p8Q-qmKhqNBpaSd1f7hOJgCEmmAn812Ts8aoExoD47q35Ey9ibJf0MLPcx_hEU_SdZK-8hFBgyZWQH573ZUKWanY8EhoX5fPBdNXlXF1YXwx0v72q0uTlcZtoAEWuNvjJbnPWZFzvVInYdwOypLO7b4rFgvAUj94yM37qJKq72KFYrI2hlHiv44Dkh3cJMBkhbw0KBswvg7mz3IVVBRC1KV8gChNt8Ixos"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-12">
+<!-- Hero Section -->
+<section class="relative px-8 md:px-16 py-20 overflow-hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full border border-outline-variant/20">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary">System Status: Optimal</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mb-8">
+                        OPEN SOURCE <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">RESEARCH &amp; TOOLS</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
+                        Xziro Lab engineers high-precision infrastructure for agentic intelligence. We specialize in the development of deterministic evaluation layers and efficiency-first workflows for autonomous systems.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest text-sm rounded-lg hover:shadow-[0_0_20px_rgba(255,179,174,0.3)] transition-all">
+                            INITIALIZE_UPLINK
+                        </button>
+<button class="px-8 py-3 border border-outline-variant/30 text-on-surface font-headline font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-surface-container-highest transition-all">
+                            VIEW_REPOSITORIES
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-4 hidden lg:block">
+<div class="relative w-full aspect-square bg-surface-container-low p-1 rounded-xl">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-xl"></div>
+<img alt="Technical Visualization" class="w-full h-full object-cover rounded-lg opacity-60 grayscale" data-alt="abstract 3d visualization of complex data structures and neural network nodes glowing in soft coral red against black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvXgg--JR16Nh4ZQ_sYA8f-ieTkZaN8_IRKVKAfnzzgiHXY7du8oNTfcCFQXJsXYzlrFIXQEc72t9n7CIj8VWVHy8r1JGOfDnyMkLEmFFL5U0hc5a63drnQS3sbqI7NT2eJRY5MqhTezGIhsk0UD-mcUSKg8CwrzeVSP0KiI3sn6Nt9mlGGvXpu6PjY1ZWSy1fI2k7oNmpSdGb86MZJtBPOnGzk1_WKWgkM4VbbnsDDXLCcmfauEw0wofNOfDxMULoH0eYKoZZGHpn"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Project: Bento Grid Style -->
+<section class="px-8 md:px-16 py-20 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-primary mb-2 block">Project_Focus_01</span>
+<h2 class="font-headline text-4xl font-bold tracking-tight uppercase">Deep Scout (Noctyl)</h2>
+</div>
+<div class="text-right">
+<span class="font-label text-xs font-mono text-on-surface-variant">BRANCH: main // VERSION: 0.4.2-beta</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Main Card -->
+<div class="md:col-span-2 bg-surface-container-highest rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-4">Static token usage estimator for multi-agent AI workflows built on LangGraph.</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed max-w-xl">
+                                Noctyl addresses the "black box" of agentic costs. By statically analyzing LangGraph DAGs, it provides deterministic token boundaries before execution, enabling enterprise-scale deployment of expensive reasoning agents without budget overruns.
+                            </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-label font-bold tracking-widest uppercase">LangGraph</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-label font-bold tracking-widest uppercase">tiktoken</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-label font-bold tracking-widest uppercase">Python 3.11+</span>
+</div>
+</div>
+</div>
+<!-- Tech Spec Card -->
+<div class="bg-surface-container-highest/50 rounded-xl p-8 border border-outline-variant/10 flex flex-col justify-between">
+<div>
+<h4 class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-6">Technical_Metadata</h4>
+<ul class="space-y-6">
+<li class="flex justify-between items-center">
+<span class="text-xs font-mono uppercase text-on-surface-variant">Primary_Runtime</span>
+<span class="text-xs font-mono text-on-surface">CPython</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-xs font-mono uppercase text-on-surface-variant">Core_Logic</span>
+<span class="text-xs font-mono text-on-surface">DAG_Analysis</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-xs font-mono uppercase text-on-surface-variant">Accuracy</span>
+<span class="text-xs font-mono text-on-surface">99.4%</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<a class="flex items-center justify-between text-primary group" href="#">
+<span class="font-label text-[10px] tracking-widest uppercase font-bold">Access_Codebase</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Establish Uplink Section -->
+<section class="px-8 md:px-16 py-32 bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl font-bold tracking-tighter uppercase mb-4">ESTABLISH_UPLINK</h2>
+<p class="font-body text-on-surface-variant">Initiate protocol for collaborative research or institutional partnerships.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant ml-1">Operator_Identity</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary text-on-surface placeholder:text-surface-container-highest transition-all" placeholder="NAME" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant ml-1">Comm_Channel</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary text-on-surface placeholder:text-surface-container-highest transition-all" placeholder="EMAIL_ADDRESS" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant ml-1">Sector_Of_Interest</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary text-on-surface appearance-none transition-all">
+<option>Multi-Agent Orchestration</option>
+<option>Deterministic Evaluation</option>
+<option>Infrastructure Open-Source</option>
+<option>General Research Request</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant ml-1">Payload_Details</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary text-on-surface placeholder:text-surface-container-highest transition-all" placeholder="DESCRIBE THE SCOPE OF THE PROPOSED COLLABORATION..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full py-5 bg-surface-container-highest text-primary font-headline font-bold uppercase tracking-[0.3em] text-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                            TRANSMIT_REQUEST
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-[#10131B] dark:bg-[#10131B] border-t border-[#32353D]/30 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-[#F64A4A] font-black font-['Space_Grotesk'] tracking-tighter">XZIRO_LAB</span>
+<span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+<span class="font-mono text-[10px] tracking-widest uppercase text-slate-500">©2024 XZIRO_LAB // UPLINK_ESTABLISHED</span>
+</div>
+<div class="flex gap-10 font-mono text-[10px] tracking-widest uppercase">
+<a class="text-slate-500 hover:text-[#FFB3AE] transition-colors" href="#">TERMINAL</a>
+<a class="text-slate-500 hover:text-[#FFB3AE] transition-colors" href="#">PROJECTS</a>
+<a class="text-slate-500 hover:text-[#FFB3AE] transition-colors" href="#">RESEARCH</a>
+<a class="text-slate-500 hover:text-[#FFB3AE] transition-colors" href="#">UPLINK</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 text-sm" data-icon="public">public</span>
+<span class="material-symbols-outlined text-slate-500 text-sm" data-icon="code">code</span>
+</div>
+</div>
+</footer>
+</body></html>

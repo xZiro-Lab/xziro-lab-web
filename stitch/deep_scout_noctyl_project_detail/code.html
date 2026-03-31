@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deep Scout // Noctyl Project Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#e0e2ee",
+              "on-surface": "#e0e2ee",
+              "on-tertiary-fixed": "#181b24",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed": "#e1e2e4",
+              "primary-fixed": "#ffdad7",
+              "surface-bright": "#363942",
+              "tertiary-fixed-dim": "#c4c6d1",
+              "secondary-container": "#444749",
+              "on-primary-fixed": "#410004",
+              "inverse-surface": "#e0e2ee",
+              "primary": "#ffb3ae",
+              "on-secondary-fixed-variant": "#444749",
+              "on-error": "#690005",
+              "background": "#10131b",
+              "secondary-fixed-dim": "#c5c6c8",
+              "primary-container": "#ff5352",
+              "on-primary-container": "#5c0008",
+              "tertiary": "#c4c6d1",
+              "surface-container-high": "#272a32",
+              "on-background": "#e0e2ee",
+              "on-secondary": "#2e3132",
+              "on-tertiary-container": "#272a32",
+              "surface-dim": "#10131b",
+              "on-secondary-fixed": "#191c1e",
+              "surface-variant": "#32353d",
+              "surface-container-lowest": "#0b0e16",
+              "error-container": "#93000a",
+              "surface-container-highest": "#32353d",
+              "inverse-on-surface": "#2d3039",
+              "on-tertiary": "#2d3039",
+              "surface-tint": "#ffb3ae",
+              "on-tertiary-fixed-variant": "#444650",
+              "surface-container-low": "#181b24",
+              "secondary": "#c5c6c8",
+              "outline-variant": "#5b403e",
+              "outline": "#aa8986",
+              "error": "#ffb4ab",
+              "surface": "#10131b",
+              "on-secondary-container": "#b4b5b7",
+              "on-primary-fixed-variant": "#930014",
+              "surface-container": "#1c1f28",
+              "tertiary-container": "#8e909b",
+              "on-primary": "#68000b",
+              "primary-fixed-dim": "#ffb3ae",
+              "inverse-primary": "#b91b25",
+              "on-surface-variant": "#e3bebb"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(28, 31, 40, 0.7);
+        backdrop-filter: blur(20px);
+      }
+      .neural-overlay {
+        background-image: radial-gradient(circle at 2px 2px, rgba(255, 179, 174, 0.05) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#10131B]/70 backdrop-blur-xl dark:bg-[#10131B]/70 flex justify-between items-center px-6 h-16 w-full shadow-[0_8px_32px_0_rgba(246,74,74,0.05)] bg-gradient-to-b from-[#181B24] to-transparent">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#F64A4A]">terminal</span>
+<h1 class="font-['Space_Grotesk'] font-bold text-[#F64A4A] tracking-tighter text-xl">XZIRO_LAB_v2.0</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-slate-400 font-['Space_Grotesk'] tracking-widest uppercase text-xs hover:bg-[#32353D]/50 transition-all duration-300 px-3 py-1" href="#">Terminal</a>
+<a class="text-[#F64A4A] border-b-2 border-[#F64A4A] font-['Space_Grotesk'] tracking-widest uppercase text-xs px-3 py-1" href="#">Research</a>
+<a class="text-slate-400 font-['Space_Grotesk'] tracking-widest uppercase text-xs hover:bg-[#32353D]/50 transition-all duration-300 px-3 py-1" href="#">Archive</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden active:scale-95 cursor-pointer">
+<img alt="System Operator Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUCu2v5dOWAAUF_HIjQ5lkVkZ-I2aUWrNfyURWRfqiYji_Yrp6EA6fJBgyNJqBe5ARSGYtBTt0vnDyI0E_k56GZWaj2nImyBVyIMy5YBn1VK8rpGutJHILgn2VG-AmlQCFv4w8DLbCtyyvMjdEqFp3UlVzV7ZYNEmAFuRwJJOd1GA9_AbQxxA3TThAA2y3WFQouMVkpeDkG-UBpdcHu1WSKjPNC3gTX5iV3vUJGF-tH8Mn1KGXObO_PI88tkDgkn4OY7ty-1nQ6Yn_"/>
+</div>
+</header>
+<!-- SideNav (NavigationDrawer) -->
+<aside class="h-full w-64 fixed left-0 top-0 z-40 bg-[#181B24] dark:bg-[#181B24] border-r border-[#32353D]/30 hidden lg:flex flex-col pt-20">
+<div class="px-6 mb-8">
+<p class="font-['Space_Grotesk'] font-medium text-xs tracking-[0.3em] text-slate-500 uppercase">CORE_SYSTEMS</p>
+</div>
+<div class="flex flex-col">
+<a class="text-slate-500 px-6 py-4 hover:text-slate-200 flex items-center gap-4 transition-colors font-['Space_Grotesk'] text-xs tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">code</span> Terminal
+            </a>
+<a class="bg-gradient-to-r from-[#F64A4A]/10 to-transparent text-[#F64A4A] border-l-4 border-[#F64A4A] px-6 py-4 flex items-center gap-4 transition-transform duration-200 ease-in-out font-['Space_Grotesk'] text-xs tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">science</span> Research
+            </a>
+<a class="text-slate-500 px-6 py-4 hover:text-slate-200 flex items-center gap-4 transition-colors font-['Space_Grotesk'] text-xs tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined">inventory_2</span> Archive
+            </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-64 pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col lg:flex-row gap-12 items-end">
+<div class="flex-1 space-y-6">
+<div class="flex items-center gap-4">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-mono tracking-widest border border-primary/20">CODENAME: NOCTYL</span>
+<span class="px-3 py-1 bg-surface-container-highest text-secondary rounded-full text-[10px] font-mono tracking-widest">VERSION: 1.0.4-BETA</span>
+</div>
+<h2 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-surface leading-none">
+                        Deep <span class="text-primary">Scout</span>
+</h2>
+<p class="text-secondary text-lg max-w-2xl leading-relaxed">
+                        Static token usage estimator for multi-agent AI workflows. Designed for high-concurrency LLM pipelines to minimize financial burn and latency in pre-inference cost calculations.
+                    </p>
+</div>
+<div class="hidden xl:block">
+<div class="w-48 h-48 border border-outline-variant/30 relative flex items-center justify-center">
+<div class="absolute inset-0 neural-overlay opacity-30"></div>
+<span class="font-mono text-[10px] text-primary/40 absolute top-2 left-2">TOKEN_PRECISION</span>
+<span class="text-primary text-4xl font-headline font-bold">99.8%</span>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Primary Image Display -->
+<div class="md:col-span-8 relative group rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/10">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+<div class="absolute top-6 left-6 z-20">
+<div class="flex items-center gap-2 bg-background/80 backdrop-blur-md px-4 py-2 rounded-lg border border-outline-variant/20">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-[10px] font-mono tracking-widest text-on-surface">STATIC_ANALYSIS_ACTIVE</span>
+</div>
+</div>
+<img alt="Noctyl Visualization" class="w-full h-[500px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_xDGnA1M5moCIkOyQftmKoKN7bsMYbC70xTkITqNFNCoOHNp2P1oE94Cd0WAA9Bb11amF4verTayXi6zvPDQcGO19u1e_sHiJSxszNjqYvl2DWlf5dNYiyLbMVwKw1FVxER3RSBkc99q0QjkFToblUZwMuaQFQ1W-9e44bTj4_CxvE0Yc-UHbs_cNk6-GQza8YM_Z-RhHjSfMsbYhJMFrDq6t2nMgOTupr_adjXMnOCno-Qty9RadbMStr9cLTcViX9mdLTWe9u07"/>
+<div class="absolute bottom-6 right-6 z-20 max-w-xs text-right">
+<p class="text-[10px] font-mono text-primary uppercase tracking-widest mb-1">Agent Workflow Mapping</p>
+<p class="text-secondary text-xs italic">Visualizing token pathways across complex multi-agent LangGraph orchestrations.</p>
+</div>
+</div>
+<!-- Repository CTA -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="flex-1 bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between border-l-4 border-primary relative overflow-hidden">
+<div class="absolute -right-8 -top-8 text-primary/5">
+<span class="material-symbols-outlined text-[160px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4 tracking-tight">Source Control</h3>
+<p class="text-secondary text-sm mb-6 leading-relaxed">
+                            Access the open-source repository for Noctyl. Contribute to the future of cost-aware agent development.
+                        </p>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-mono text-slate-400 border-b border-outline-variant/20 pb-2">
+<span>REPO</span>
+<span class="text-on-surface">xZiro-Lab/Noctyl</span>
+</div>
+<div class="flex justify-between text-xs font-mono text-slate-400 border-b border-outline-variant/20 pb-2">
+<span>LANGUAGE</span>
+<span class="text-on-surface">Python</span>
+</div>
+<div class="flex justify-between text-xs font-mono text-slate-400 border-b border-outline-variant/20 pb-2">
+<span>LICENSE</span>
+<span class="text-on-surface">Apache-2.0</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-sm tracking-widest rounded transition-transform active:scale-95 flex items-center justify-center gap-2">
+                        GITHUB_REPOSITORY <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- System Architecture -->
+<div class="md:col-span-12 lg:col-span-7 bg-surface-container-low rounded-xl p-10 border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-12">
+<h3 class="font-headline text-3xl font-bold tracking-tight">System Architecture</h3>
+<div class="h-px flex-1 bg-gradient-to-r from-outline-variant/40 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Multi-agent Orchestration</h4>
+<p class="text-secondary text-xs leading-relaxed">Integrated LangGraph support for estimating token usage across recursive agent loops.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">CLI-based Workflow</h4>
+<p class="text-secondary text-xs leading-relaxed">Developer-first interface for rapid prototyping and CI/CD integration.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">tiktoken Integration</h4>
+<p class="text-secondary text-xs leading-relaxed">Offline tokenization using OpenAI's high-speed BPE tokenizer engine.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Static Analysis</h4>
+<p class="text-secondary text-xs leading-relaxed">Calculate exact input/output costs before committing a single API request.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Installation & Ops Terminal -->
+<div class="md:col-span-12 lg:col-span-5 bg-surface-container-lowest rounded-xl border border-outline-variant/30 flex flex-col overflow-hidden shadow-2xl">
+<div class="bg-surface-container-high px-4 py-3 flex items-center justify-between">
+<div class="flex gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary/40"></div>
+</div>
+<span class="text-[10px] font-mono text-slate-500 tracking-widest uppercase">root@xziro-lab:~/noctyl</span>
+</div>
+<div class="p-8 font-mono text-sm leading-relaxed overflow-x-auto">
+<div class="flex gap-4 mb-4">
+<span class="text-primary-container">$</span>
+<span class="text-on-surface">git clone <span class="text-primary">https://github.com/xZiro-Lab/Noctyl.git</span></span>
+</div>
+<div class="text-slate-500 mb-4 ml-8">
+                        Cloning into 'Noctyl'...<br/>
+                        remote: Enumerating objects: 322, done.<br/>
+                        remote: Total 322 (delta 12), reused 310 (delta 8)
+                    </div>
+<div class="flex gap-4 mb-4">
+<span class="text-primary-container">$</span>
+<span class="text-on-surface">pip install <span class="text-primary">-r requirements.txt</span></span>
+</div>
+<div class="text-slate-500 mb-4 ml-8">
+                        [OK] Installing tiktoken v0.5.2...<br/>
+                        [OK] Installing langgraph v0.0.24...<br/>
+                        [OK] Dependencies verified.
+                    </div>
+<div class="flex gap-4 mb-4">
+<span class="text-primary-container">$</span>
+<span class="text-on-surface">python <span class="text-primary">noctyl.py</span> --workflow my_agent_graph.json</span>
+</div>
+<div class="flex items-center gap-2 mt-6">
+<div class="w-2 h-4 bg-primary animate-pulse"></div>
+<span class="text-primary font-bold">ESTIMATION_COMPLETE // BURN_RATE: LOW</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 mt-auto bg-[#0B0E16] dark:bg-[#0B0E16] border-t border-[#32353D]/20 flex flex-col md:flex-row justify-between items-center px-12 gap-4">
+<div class="text-[#F64A4A] dark:text-[#FFB3AE] font-mono text-[10px] uppercase tracking-[0.2em]">
+            ©2024 XZIRO_LAB // NOCTYL_SYSTEM_READY
+        </div>
+<div class="flex gap-8">
+<a class="text-slate-600 font-mono text-[10px] uppercase tracking-[0.2em] hover:text-[#F64A4A] transition-opacity opacity-80 hover:opacity-100" href="#">X</a>
+<a class="text-slate-600 font-mono text-[10px] uppercase tracking-[0.2em] hover:text-[#F64A4A] transition-opacity opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-slate-600 font-mono text-[10px] uppercase tracking-[0.2em] hover:text-[#F64A4A] transition-opacity opacity-80 hover:opacity-100" href="#">Discord</a>
+</div>
+</footer>
+</body></html>

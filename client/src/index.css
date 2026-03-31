@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -277,6 +278,235 @@
 
   .animate-glow {
     animation: glowPulse 2s infinite;
+  }
+
+  .deep-scout-page {
+    background: #10131b;
+    color: #e0e2ee;
+    font-family: "Inter", var(--font-sans), sans-serif;
+  }
+
+  .deep-scout-page .container {
+    max-width: 1280px;
+  }
+
+  .deep-scout-topbar {
+    background: linear-gradient(to bottom, rgba(24, 27, 36, 0.95), rgba(16, 19, 27, 0.7));
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(91, 64, 62, 0.2);
+  }
+
+  .deep-scout-link {
+    color: #c5c6c8;
+    font-family: "Space Grotesk", var(--font-mono), monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .deep-scout-link:hover {
+    color: #ffb3ae;
+    background: rgba(50, 53, 61, 0.45);
+  }
+
+  .deep-scout-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 179, 174, 0.25);
+    background: rgba(255, 179, 174, 0.08);
+    padding: 0.28rem 0.7rem;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    color: #ffb3ae;
+  }
+
+  .deep-scout-chip-muted {
+    border-color: rgba(197, 198, 200, 0.3);
+    background: rgba(50, 53, 61, 0.6);
+    color: #c5c6c8;
+  }
+
+  .deep-scout-title {
+    font-family: "Space Grotesk", var(--font-mono), monospace;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .deep-scout-title-accent {
+    color: #ffb3ae;
+  }
+
+  .deep-scout-subtitle {
+    color: #b4b5b7;
+    line-height: 1.7;
+  }
+
+  .deep-scout-kicker {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffb3ae;
+  }
+
+  .deep-scout-metric-card {
+    width: 12rem;
+    height: 12rem;
+    border: 1px solid rgba(91, 64, 62, 0.4);
+    background: rgba(24, 27, 36, 0.7);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .deep-scout-metric-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: #ff5352;
+  }
+
+  .deep-scout-metric-value {
+    font-family: "Space Grotesk", var(--font-mono), monospace;
+    color: #ffb3ae;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+  }
+
+  .deep-scout-visual-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: #181b24;
+    min-height: 420px;
+    box-shadow: 0 28px 60px rgba(255, 179, 174, 0.06);
+  }
+
+  .deep-scout-neural-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 179, 174, 0.08) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.28;
+    z-index: 1;
+  }
+
+  .deep-scout-visual-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(16, 19, 27, 0.72);
+    backdrop-filter: blur(10px);
+    border-radius: 0.45rem;
+    padding: 0.45rem 0.7rem;
+    font-family: var(--font-mono), monospace;
+    letter-spacing: 0.14em;
+    font-size: 0.64rem;
+    color: #e0e2ee;
+  }
+
+  .deep-scout-cta-card {
+    border-radius: 0.75rem;
+    background: #32353d;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 24px 48px rgba(255, 179, 174, 0.06);
+    border-left: 2px solid rgba(255, 179, 174, 0.8);
+  }
+
+  .deep-scout-section-title {
+    font-family: "Space Grotesk", var(--font-mono), monospace;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #e0e2ee;
+  }
+
+  .deep-scout-meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.4rem;
+    font-family: var(--font-mono), monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #9ca0a8;
+  }
+
+  .deep-scout-primary-btn {
+    font-family: "Space Grotesk", var(--font-mono), monospace;
+    letter-spacing: 0.1em;
+    border-radius: 0.35rem;
+    color: #5c0008;
+    background-image: linear-gradient(45deg, #ffb3ae, #ff5352);
+  }
+
+  .deep-scout-primary-btn:hover {
+    filter: brightness(1.02);
+    box-shadow: 0 0 24px rgba(255, 83, 82, 0.2);
+  }
+
+  .deep-scout-architecture-card {
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background: #181b24;
+    box-shadow: 0 30px 56px rgba(255, 179, 174, 0.04);
+  }
+
+  .deep-scout-icon-box {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    color: #ffb3ae;
+    background: rgba(50, 53, 61, 0.9);
+  }
+
+  .deep-scout-terminal-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #0b0e16;
+    box-shadow: 0 30px 56px rgba(255, 179, 174, 0.07);
+    border: 1px solid rgba(91, 64, 62, 0.3);
+  }
+
+  .deep-scout-terminal-head {
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #272a32;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7f848f;
+  }
+
+  .deep-scout-terminal-line {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    color: #e0e2ee;
+    line-height: 1.5;
+    word-break: break-word;
   }
 }
 
